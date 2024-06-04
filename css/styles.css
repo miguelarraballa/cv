@@ -1,0 +1,5 @@
+@import url('theme-template.css');
+
+section {
+    min-height: 20vh;
+}
