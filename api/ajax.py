@@ -7,7 +7,7 @@ import cnt.itemsController as itemsController
 db = db.conn("api/database.db")
 
 api = Flask(__name__)
-api.secret_key = 't7kUXtePF7q2q3WQEyV3peFr78ZotjrW'
+api.secret_key = ''
 api.config['SESSION_TYPE'] = 'filesystem'
 session(api)
 
