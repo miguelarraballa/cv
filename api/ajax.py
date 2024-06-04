@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, request
 import conn as db
 import cnt.categoriesController as categoriesController 
 import cnt.itemsController as itemsController 
@@ -9,9 +9,3 @@ api = Flask(__name__)
 
 categories = categoriesController.categories() 
 items = itemsController.items()
-
-
-
-
-
-

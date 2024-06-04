@@ -1,3 +1,5 @@
 .DS_Store
 .vscode/
 api/database.db
+py/database.db
+__pycahe__
