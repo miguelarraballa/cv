@@ -1,4 +1,5 @@
 import sqlite3
+import hashlib
 import debug
 
 class conn:
@@ -13,7 +14,7 @@ class conn:
 
         #initialize tables
         self.create_tables()
-        self.categories_load()
+        self.init_load()
 
 
     def create_tables(self):
@@ -44,6 +45,12 @@ class conn:
                 update_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (category_id) REFERENCES categories(ID)
             )
+            """, 
+            """CREATE TABLE IF NOT EXISTS users (
+                ID              INTEGER PRIMARY KEY AUTOINCREMENT,
+                username        TEXT UNIQUE NOT NULL,
+                password        TEXT NOT NULL 
+            )
             """
         ]
         try:
@@ -54,7 +61,7 @@ class conn:
         except sqlite3.Error as e:
             print(e)
 
-    def categories_load(self):
+    def init_load(self):
 
         categories = [
             ['Experiencia profesional','EXPR',''],
@@ -62,8 +69,8 @@ class conn:
             ['Certificados y cursos','CRCU',''],
             ['Habilidades Técnicas (Hard Skills)','HASK',''],
             ['Habilidades Personales (Soft Skills)','SOSK','']
-        ] 
-
+        ]
+        
         try:
         
             cursor = self.conn.cursor()
@@ -79,7 +86,6 @@ class conn:
             
             self.conn.commit()
                
-
         except sqlite3.Error as e:
             self.debug.log.write(e,'error')
             print(e)
@@ -194,3 +200,6 @@ class conn:
     
     def close(self):
         return self.conn.close()
+    
+    def hash_password(self,password):
+        return hashlib.sha256(password.encode()).hexdigest()

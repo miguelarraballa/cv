@@ -13,7 +13,7 @@ class categories():
         return db.conn.select(query)
     
     def read(self,ID):
-        query = f"SELECT * FROM categorias WHERE ID = {ID} "
+        query = f"SELECT * FROM categories WHERE ID = {ID} "
         return db.conn.select(query)
 
     def create(self,data):
