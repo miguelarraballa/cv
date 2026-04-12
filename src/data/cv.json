@@ -1,0 +1,714 @@
+{
+  "personal": {
+    "name": "Miguel Antonio Arrabal López-Angulo",
+    "nameDisplay": "Miguel Arrabal",
+    "title": "Programador Full Stack",
+    "subtitle": "PHP · Laravel · WordPress · JavaScript · Python · Git · React · Next.js",
+    "description": "Programador full stack con más de 20 años de experiencia desarrollando soluciones web a medida para empresas. Especializado en backend con PHP/Laravel y desarrollo avanzado en WordPress (plugins, integraciones API, eCommerce). Experiencia en mantenimiento evolutivo, optimización de rendimiento y desarrollo de sistemas de gestión (CRM/ERP). Actualmente ampliando competencias en Data Science, automatización y ciberseguridad.",
+    "location": "Málaga, España",
+    "email": "info@mdmgdesarrolloweb.com",
+    "phone": "654828896",
+    "github": "https://github.com/miguelarraballa",
+    "linkedin": "https://www.linkedin.com/in/miguelarrabal/",
+    "web": "https://mdmgdesarrolloweb.com"
+  },
+  "skills": {
+    "tabs": [
+      "Web",
+      "WordPress",
+      "Datos"
+    ],
+    "Web": [
+      {
+        "title": "Mantenimiento CMR de gestión comercial y desarrollo de nuevas funciones - Centro de Seguimiento Formativo",
+        "description": "Desarrollo y evolución de CRM de gestión comercial para formación bonificada (FUNDAE). Sistema con 90+ usuarios activos, 3 fuerzas comerciales y gestión de aproximadamente 150 cursos mensuales (picos de más del doble en campañas (noviembre-diciembre)). Automatización de liquidaciones, comisiones y procesos administrativos. Plataforma clave en operaciones que generan entre 650.000€ y 750.000€ anuales. Proyecto activo y en producción desde 2018.",
+        "url": "",
+        "year": "2018 - 2026",
+        "tags": [
+          "PHP",
+          "MySQL",
+          "Bootstrap",
+          "jQuery",
+          "HTML5",
+          "CSS"
+        ],
+        "pdf": 1
+      },
+      {
+        "title": "Portfolio artista - Maite Vroom",
+        "description": "Portfolio de artista con gestión de contenidos en panel de control",
+        "url": "https://maitevroom.com",
+        "year": "2026",
+        "tags": [
+          "Strapi",
+          "React",
+          "Next.js",
+          "Taillwind"
+        ],
+        "pdf": 1
+      },
+      {
+        "title": "Actualización y refactorización web y backend - Gravura",
+        "description": "Refactorización completa de web y backend. Migración de base de datos de SQLite a MySQL, mejora de estabilidad del sistema y corrección de incidencias en eCommerce. Integración con Stripe y optimización del flujo de compra.",
+        "url": "https://gravura.es",
+        "year": "2025",
+        "tags": [
+          "Strapi",
+          "React",
+          "Next.js",
+          "Taillwind",
+          "Stripe"
+        ],
+        "pdf": 1
+      },
+      {
+        "title": "Webapp carticaturas - CartoonClub",
+        "description": "Desarrollo de webapp accesible mediante QR en entorno turístico para gestión de pedidos de caricaturas. Backend en Python para gestión de pedidos y pagos. Sistema orientado a venta directa en movilidad.",
+        "url": "https://nerja.cartoonclub.es",
+        "year": "2025",
+        "tags": [
+          "JavaScript",
+          "React",
+          "Next.js",
+          "HTML",
+          "CSS",
+          "Python"
+        ],
+        "pdf": 1
+      },
+      {
+        "title": "Sidetours — Web Corporativa - PlanB Comunicación",
+        "description": "Maquetación de web corporativa sin CMS. Desarrollo desde cero en PHP, MySQL, JavaScript, Bootstrap, jQuery, HTML5 y CSS. Mantenimiento y rediseño en 2022",
+        "url": "https://sidetours.com",
+        "year": "2017 - 2022",
+        "tags": [
+          "PHP",
+          "MySQL",
+          "Bootstrap",
+          "jQuery",
+          "HTML5",
+          "CSS"
+        ],
+        "pdf": 0
+      },
+      {
+        "title": "Notificad@s — Maquetación de diseño - Aulatina",
+        "description": "Maquetación diseño frontend en HTML y JavaScript para aplicación de notificación electrónica, en el marco de rediseño de marca.",
+        "url": "https://notificados.com",
+        "year": "2019",
+        "tags": [
+          "Bootstrap",
+          "jQuery",
+          "HTML5",
+          "CSS"
+        ],
+        "pdf": 0
+      },
+      {
+        "title": "Plataforma QR 3.0 — Marketing - Ideanto",
+        "description": "Desarrollo de la idea. Inicio de desarrollo y release  v1.0.0  de la plataforma original de marketing con tecnología QR.",
+        "url": "https://ideanto.com/#otros",
+        "year": "2012",
+        "tags": [
+          "PHP",
+          "MySQL",
+          "jQuery",
+          "JavaScript",
+          "HTML5",
+          "CSS"
+        ],
+        "pdf": 0
+      },
+      {
+        "title": "SEQR — Seguridad - Ideanto",
+        "description": "Desarrollo de la idea original de pulseras con información personal para localización de niños y adultos con necesidades especiales en eventos, playas, etc. Inicio de desarrollo y release  v1.0.0 de la webapp SEQR con tecnología QR.",
+        "url": "https://ideanto.com/#otros",
+        "year": "2012",
+        "tags": [
+          "PHP",
+          "MySQL",
+          "jQuery",
+          "JavaScript",
+          "HTML5",
+          "CSS"
+        ],
+        "pdf": 0
+      },
+      {
+        "title": "Fidelicard — Marketing - Ideanto",
+        "description": "Desarrollo de la idea original. Inicio de desarrollo y release  v1.0.0 de la webapp Fidelicard con tecnología QR.",
+        "url": "https://ideanto.com/#otros",
+        "year": "2012",
+        "tags": [
+          "PHP",
+          "MySQL",
+          "jQuery",
+          "JavaScript",
+          "HTML5",
+          "CSS"
+        ],
+        "pdf": 0
+      }
+    ],
+    "WordPress": [
+      {
+        "title": "Proyectos para agencias",
+        "description": "Desarrollo de soluciones WordPress para agencias y clientes finales: creación de plugins a medida, integraciones API y automatización de procesos de negocio en entornos WooCommerce y Elementor.",
+        "url": "",
+        "year": "2018 -2026",
+        "tags": [
+          "WordPress",
+          "PHP",
+          "API REST",
+          "JavaScript"
+        ],
+        "pdf": 1
+      },
+      {
+        "title": "Proyectos Corporativos — PlanB Comunicación",
+        "description": "Desarrollo de plugins WordPress a medida e integraciones API para clientes. Automatización de procesos de negocio y desarrollo de funcionalidades personalizadas en entornos WooCommerce y Elementor.",
+        "url": "",
+        "year": "2016 - 2025",
+        "tags": [
+          "WordPress",
+          "Elementor",
+          "PHP",
+          "API REST",
+          "jQuery"
+        ],
+        "pdf": 1
+      },
+      {
+        "title": "Firma Electrónica — 3G Mobile Group - Educación Técnica a Distancia",
+        "description": "Plugin de WordPress para intranet comercial de envío de contratos y firma electrónica. Integración con Laravel y gestión de flujo documental.",
+        "url": "https://edutedis.com",
+        "year": "2023",
+        "tags": [
+          "PHP",
+          "WordPress",
+          "MySQL",
+          "JavaScript"
+        ],
+        "pdf": 0
+      },
+      {
+        "title": "E-Commerce y Tiendas Online",
+        "description": "Desarrollo de tiendas online con WooCommerce para clientes finales (reinventarvintage.com, lcamalaga.com, edukaformacion.com). Personalización de temas, pasarelas de pago y gestión de catálogo.",
+        "url": "",
+        "year": "2008 - 2026",
+        "tags": [
+          "WooCommerce",
+          "WordPress",
+          "PHP",
+          "CSS",
+          "Stripe"
+        ],
+        "pdf": 0
+      },
+      {
+        "title": "Digital Key Solution — Gestión de Licencias - Beta5",
+        "description": "Diseño web en WordPress y WooCommerce con conexión a intranet de gestión de licencias por suscripcion desarrollada en Laravel para venta de aplicación de gestión.",
+        "url": "https://www.digitalkeysolutions.es",
+        "year": "2022",
+        "tags": [
+          "WordPress",
+          "WooCommerce",
+          "Laravel",
+          "PHP",
+          "MySQL"
+        ],
+        "pdf": 0
+      },
+      {
+        "title": "Edutedis — Portal Educativo - Educación Técnica a Distancia",
+        "description": "Desarrollo de web corporativa y eCommerce (edutedis.com, edutedisconsultoria.com). Personalización avanzada de temas y flujos de compra.",
+        "url": "https://edutedis.com",
+        "year": "2023",
+        "tags": [
+          "WordPress",
+          "WooCommerce",
+          "Elementor",
+          "PHP",
+          "CSS"
+        ],
+        "pdf": 0
+      },
+      {
+        "title": "Portfolio artista - Verónica Romero",
+        "description": "Portfolio de artista",
+        "url": "https://veronica-romero.com",
+        "year": "2023",
+        "tags": [
+          "WordPress",
+          "PHP",
+          "javaScript",
+          "HTML",
+          "CSS"
+        ],
+        "pdf": 0
+      },
+      {
+        "title": "PadThaiWok — Buscador Geolocalizado - PlanB Comunicación",
+        "description": "Plugin de WordPress para gestión de restaurantes con buscador geolocalizado. Integración con Google Maps API para localización en tiempo real.",
+        "url": "",
+        "year": "2021 - 2023",
+        "tags": [
+          "WordPress",
+          "PHP",
+          "Google Maps API",
+          "JavaScript",
+          "MySQL"
+        ],
+        "pdf": 0
+      },
+      {
+        "title": "Lorena Cafe — Web + Fidelización - PlanB Comunicación",
+        "description": "Maquetación de diseño completo, plugin de conexión con API de tarjeta de fidelización y widget de Elementor para gestión de carta por el equipo de marketing.",
+        "url": "https://lorenacafe.com",
+        "year": "2020",
+        "tags": [
+          "WordPress",
+          "Elementor",
+          "PHP",
+          "API",
+          "WooCommerce"
+        ],
+        "pdf": 0
+      },
+      {
+        "title": "Plugin Gestión Comercial para WordPress — Mediterranea Masters School",
+        "description": "Plugin WordPress para gestión de cursos, alumnos, flujo comercial y leads. Integración con eMagister, WooCommerce y múltiples pasarelas de pago.",
+        "url": "https://mediterraneamasterschool.com",
+        "year": "2021",
+        "tags": [
+          "PHP",
+          "MySQL",
+          "WooCommerce",
+          "Elementor",
+          "API REST"
+        ],
+        "pdf": 1
+      },
+      {
+        "title": "Plugin Inmobiliario — Inmovilla - PrimerGrupo",
+        "description": "Plugin de WordPress a medida para conexión con la plataforma Inmovilla. Sincronización de propiedades en tiempo real vía API REST.",
+        "url": "https://www.primergrupo.com/resultados/",
+        "year": "2018",
+        "tags": [
+          "PHP",
+          "WordPress",
+          "API REST",
+          "MySQL",
+          "JSON"
+        ],
+        "pdf": 1
+      },
+      {
+        "title": "Sala premier - Impellers",
+        "description": "Diseño, maquetación, theme propio y plugin pesonalizado",
+        "url": "https://salapremier.com",
+        "year": "2017",
+        "tags": [
+          "PHP",
+          "WordPress",
+          "MySQL"
+        ],
+        "pdf": 0
+      },
+      {
+        "title": "La Casa Amarilla",
+        "description": "Desarrollo y mantenimiento de web y eCommerce desde 2008. Maquetación completa, plugins personalizados y tienda online con WooCommerce.",
+        "url": "http://lacasa-amarilla.es",
+        "year": "2008",
+        "tags": [
+          "HTML5",
+          "CSS",
+          "JavaScript",
+          "WordPress",
+          "WooCommerce"
+        ],
+        "pdf": 1
+      }
+    ],
+    "Datos": [
+      {
+        "title": "Google Data Analytics",
+        "description": "Formación en análisis de datos: SQL avanzado, limpieza y transformación de datos, visualización (Tableau) y uso de Python/R para análisis. Aplicación práctica en entornos reales.",
+        "url": "",
+        "year": "2024",
+        "tags": [
+          "SQL",
+          "R",
+          "Tableau",
+          "Python",
+          "BigQuery"
+        ],
+        "pdf": 0
+      },
+      {
+        "title": "IBM Data Science Professional",
+        "description": "Formación completa en Data Science con IBM: Python, Machine Learning, Data Visualization, SQL para Data Science y metodología científica de datos.",
+        "url": "",
+        "year": "2026",
+        "tags": [
+          "Python",
+          "Machine Learning",
+          "Pandas",
+          "Numpy",
+          "SQL"
+        ],
+        "pdf": 0
+      },
+      {
+        "title": "Google Cybersecurity Certificate",
+        "description": "Certificación en ciberseguridad: gestión de riesgos, seguridad de redes, Linux, SQL, automatización con Python y respuesta ante incidentes.",
+        "url": "",
+        "year": "2024",
+        "tags": [
+          "Python",
+          "Linux",
+          "SQL",
+          "SIEM",
+          "Ciberseguridad"
+        ],
+        "pdf": 0
+      },
+      {
+        "title": "Python Full Stack — IBM SkillsBuild",
+        "description": "Desarrollo full stack con Python: backend con Django/Flask, APIs REST, bases de datos relacionales y despliegue de aplicaciones.",
+        "url": "",
+        "year": "2024",
+        "tags": [
+          "Python",
+          "Django",
+          "Flask",
+          "API REST",
+          "SQL"
+        ],
+        "pdf": 0
+      }
+    ]
+  },
+  "education": [
+    {
+      "degree": "Técnico en Desarrollo de Aplicaciones con MySQL y PHP",
+      "institution": "FORMAN — Oracle Certified Associate, MySQL5",
+      "period": "2011 – 2012",
+      "description": "Formación técnica de 780 horas en desarrollo de aplicaciones web con PHP y MySQL. Certificación Oracle Certified Associate MySQL5.",
+      "note": "780h"
+    },
+    {
+      "degree": "Celador Sanitario",
+      "institution": "Centro Estudios Huelin — Servicio Andaluz de Empleo - Conserjería de empleo Junta de Andalucía",
+      "period": "2006",
+      "description": "Formación técnica de 309 horas en el sector sanitario (Atención al público, Traslado y movilización de pacientes, tratamiento de documentos y muestras biológicas)",
+      "note": "309h"
+    },
+    {
+      "degree": "Licenciado en Medicina y Cirugía",
+      "institution": "Universidad de Málaga — Facultad de Medicina",
+      "period": "1994 – 2002",
+      "description": "Estudios no concluidos. Participación activa en la vida universitaria y en la pastoral del centro.",
+      "note": "Inconclusos"
+    },
+    {
+      "degree": "EGB, BUP y COU",
+      "institution": "Colegio San Estanislao de Kostka, Málaga",
+      "period": "1980 – 1994",
+      "description": "Educación primaria y secundaria en rama Rama Mixta Biosanitaria - Técnica (Biologia, Química, Física, Matemáticas biosanitarias + técnica, Dibujo técnico). Actividades extracurriculares de pastoral, informática, oratoria y teatro.",
+      "note": "Nota media 8,48"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "IBM Data Science - Professional Certificate",
+      "issuer": "IBM / Coursera",
+      "year": "2026",
+      "hours": "160",
+      "diplomaFile": "diplomas/--certificado-profesional-ibm-data-sciencie.pdf",
+      "certUrl": "https://coursera.org/verify/professional-cert/S3UI8M3X4KIZ"
+    },
+    {
+      "name": "Google Data Analytics - Professional Certificate",
+      "issuer": "Google / Coursera",
+      "year": "2024",
+      "hours": "152",
+      "diplomaFile": "/diplomas/--certificado-google-analisis-de-datos-de-google.pdf",
+      "certUrl": "https://coursera.org/verify/professional-cert/VKXA4ZZDUR90"
+    },
+    {
+      "name": "Google Cybersecurity - Professional Certificate",
+      "issuer": "Google / Coursera",
+      "year": "2024",
+      "hours": "130",
+      "diplomaFile": "/diplomas/--certificado-google-google-cybersecurity.pdf",
+      "certUrl": "https://coursera.org/verify/professional-cert/A4AVU7LB3M3B"
+    },
+    {
+      "name": "English Certificate C1 Advanced",
+      "issuer": "International English Test",
+      "year": "2024",
+      "hours": "",
+      "diplomaFile": "/diplomas/--certificado-english-certificate_c1-advanced-english-level_miguel-antonio-arrabal-lopez-angulo.pdf",
+      "certUrl": "https://internationalenglishtest.com/verify-certificate/138E5DB36-138E5DB99-138E5B35B/"
+    },
+    {
+      "name": "IBM Python Full Stack",
+      "issuer": "IBM SkillsBuild / BeJob",
+      "year": "2024",
+      "hours": "60",
+      "diplomaFile": "/diplomas/--certificado-ibm-bejob-python-full-stack.pdf",
+      "certUrl": ""
+    },
+    {
+      "name": "Gestión de Seguridad Informática en la Empresa",
+      "issuer": "SKILLSOFT Global Knowledge",
+      "year": "2023",
+      "hours": "100",
+      "diplomaFile": "/diplomas/--diploma-gestion-de-la-seguridad-informatica-en-la-empresa.pdf",
+      "certUrl": ""
+    },
+    {
+      "name": "Curso de Lenguaje Visual y Fotografía de Autor",
+      "issuer": "Escuela de Fotografía Apertura",
+      "year": "2015",
+      "hours": "72",
+      "diplomaFile": "/diplomas/--diploma-curso-de-lenguaje-visual-y-fotografia-de-autor.pdf",
+      "certUrl": ""
+    },
+    {
+      "name": "Oracle Certified Associate MySQL5",
+      "issuer": "Oracle",
+      "year": "2012",
+      "hours": "",
+      "diplomaFile": "/diplomas/--certificado-oracle-asociated,-mysql5.pdf",
+      "certUrl": ""
+    },
+    {
+      "name": "Formador de Formadores",
+      "issuer": "IMFE — Ayuntamiento de Málaga",
+      "year": "2012",
+      "hours": "100",
+      "diplomaFile": "/diplomas/--diploma-formador-de-formadores.pdf",
+      "certUrl": ""
+    },
+    {
+      "name": "Fotografía Publicitaria y Moda",
+      "issuer": "Escuela de Fotografía Apertura",
+      "year": "2011",
+      "hours": "36",
+      "diplomaFile": "/diplomas/--diploma-fotografia-publicitaria-y-moda.pdf",
+      "certUrl": ""
+    },
+    {
+      "name": "Curso de Fotoperiodismo y reportaje",
+      "issuer": "Escuela de Fotografía Apertura",
+      "year": "2010",
+      "hours": "30",
+      "diplomaFile": "/diplomas/--diploma-curso-de-fotoperiodismo-y-reportaje.pdf",
+      "certUrl": ""
+    },
+    {
+      "name": "Curso de Fotografía digital avanzada",
+      "issuer": "Escuela de Fotografía Apertura",
+      "year": "2010",
+      "hours": "30",
+      "diplomaFile": "/diplomas/--diploma-curso-de-fotografia-digital-avanzada.pdf",
+      "certUrl": ""
+    },
+    {
+      "name": "Certificado de asignaturas superadas de la licenciatura de Medicina y Cirugía",
+      "issuer": "Facultad de Medicina de Málaga - Universidad de Málaga",
+      "year": "2005",
+      "hours": "",
+      "diplomaFile": "/diplomas/--certificado-asignaturas-superadas-de-medicina.pdf",
+      "certUrl": ""
+    },
+    {
+      "name": "Diseño Avanzado con Macromedia Studio MX",
+      "issuer": "Diputación Provincial de Málaga",
+      "year": "2004",
+      "hours": "50",
+      "diplomaFile": "/diplomas/--diploma-diseno-avanzado-de-paginas-web-con-macromedia-studio-mx-(dreamweaver,-flash,-fireworks).pdf",
+      "certUrl": ""
+    },
+    {
+      "name": "Creación de Sitios Web Dinámicos con PHP y MySQL",
+      "issuer": "Diputación Provincial de Málaga",
+      "year": "2004",
+      "hours": "30",
+      "diplomaFile": "/diplomas/--diploma-creacion-de-sitios-webs-dinamicos-con-php-y-mysql.pdf",
+      "certUrl": ""
+    },
+    {
+      "name": "Programación en ActionScript 2 (Flash Avanzado)",
+      "issuer": "Diputación Provincial de Málaga",
+      "year": "2004",
+      "hours": "25",
+      "diplomaFile": "/diplomas/--diploma-programacion-en-actionscript-2-(flash-avanzado).pdf",
+      "certUrl": ""
+    }
+  ],
+  "experience": [
+    {
+      "position": "Programador Full Stack Freelance",
+      "company": "Freelance / Autónomo",
+      "period": "2015 – actualidad",
+      "location": "Málaga, España (remoto)",
+      "type": "Freelance",
+      "description": "Desarrollo de soluciones web a medida para empresas y agencias: aplicaciones de gestión, eCommerce, integraciones API y mantenimiento evolutivo de sistemas en producción. Trabajo recurrente con cliente principal en entorno empresarial complejo.",
+      "achievements": [
+        "Más de 70 clientes atendidos (empresas y agencias) desde 2015",
+        "Más de 80 proyectos desarrollados y facturados entre 2018 y 2026",
+        "Colaboración recurrente con 6+ agencias, participando en múltiples proyectos por cliente",
+        "Desarrollo y mantenimiento de CRM de gestión comercial para formación bonificada (FUNDAE) con 90+ usuarios activos y 100+ históricos",
+        "Sistema utilizado por 3 fuerzas comerciales activas (y 3 históricas), con expansión prevista a nuevas comercializadoras",
+        "Gestión de aproximadamente 150 cursos mensuales (picos de hasta 300 en campaña), con automatización de liquidaciones y comisiones",
+        "Soporte a operaciones de negocio que generan entre 650.000€ y 750.000€ anuales en facturación",
+        "Dedicación continuada (6h/día) a cliente principal (Beta5) en proyectos críticos de negocio",
+        "Desarrollo de plugins WordPress a medida para gestión comercial de venta de másteres y cursos de postgrado",
+        "Implementación de sistemas de firma electrónica de contratos integrados en WordPress",
+        "Desarrollo de aplicaciones internas para gestión de tareas en asesorías (PRL, Planes de Igualdad, etc.)",
+        "Creación de aplicaciones para automatización de envío de documentación a empresas (bonificaciones FUNDAE)",
+        "Desarrollo de plataforma de gestión de suscripciones para software de escritorio",
+        "Implementación de tiendas online y soluciones WooCommerce personalizadas",
+        "Integración de APIs externas (pagos, plataformas educativas, ERPs)",
+        "Gestión completa del ciclo de vida del software: análisis, desarrollo, despliegue y mantenimiento",
+        "Optimización y resolución de incidencias en sistemas en producción"
+      ]
+    },
+    {
+      "position": "Programador PHP",
+      "company": "Ideanto Comunicación",
+      "period": "2012 – 2014",
+      "location": "Paseo de la Farola, Málaga",
+      "type": "Empresa",
+      "description": "Responsable de desarrollo web en agencia de marketing digital. Desarrollo de plataformas propias y aplicaciones web para clientes.",
+      "achievements": [
+        "Participación en el desarrollo de plataformas propias como QR 3.0 y Fidelicard",
+        "Desarrollo de webapps móviles con tecnologías web (HTML5, jQuery Mobile)",
+        "Implementación de soluciones basadas en QR para marketing y trazabilidad",
+        "Integración de WordPress con entornos interactivos (KRPano)",
+        "Colaboración en proyectos innovadores de marketing digital"
+      ]
+    },
+    {
+      "position": "Fotógrafo Freelance",
+      "company": "Freelance",
+      "period": "2007 – 2015",
+      "location": "Málaga, España",
+      "type": "Freelance",
+      "description": "Fotoreportaje de eventos, fotografía artística, fotografía de producto para web y eCommerce. Equipo propio y formación continua en escuela especializada.",
+      "achievements": [
+        "Fotografía de producto para tiendas online y diseño web",
+        "Formación especializada: más de 10 talleres y cursos en Escuela Apertura Málaga"
+      ]
+    },
+    {
+      "position": "Programador PHP Freelance",
+      "company": "Freelance",
+      "period": "2004 – 2015",
+      "location": "Málaga, España",
+      "type": "Freelance",
+      "description": "Desarrollo de proyectos web a medida para clientes: páginas corporativas, aplicaciones de gestión y primeras soluciones eCommerce.",
+      "achievements": [
+        "Desarrollo de aplicaciones web en PHP/MySQL para gestión empresarial",
+        "Implementación de sitios web dinámicos y CMS para clientes",
+        "Mantenimiento a largo plazo de proyectos como La Casa Amarilla",
+        "Administración técnica de plataformas web y comunidades online"
+      ]
+    },
+    {
+      "position": "Auxiliar de Enfermería",
+      "company": "San Estanislao de Kostka",
+      "period": "2006 – 2011",
+      "location": "Málaga, España",
+      "type": "Empresa",
+      "description": "Cuidado de enfermos geriátricos residentes en centro asistencial.",
+      "achievements": [
+        "Atención y cuidado integral de pacientes geriátricos",
+        "Coordinación con equipo de enfermería y médicos"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "name": "Español",
+      "flag": "🇪🇸",
+      "reading": 5,
+      "writing": 5,
+      "listening": 5,
+      "speaking": 5
+    },
+    {
+      "name": "Inglés",
+      "flag": "🇬🇧",
+      "reading": 5,
+      "writing": 4,
+      "listening": 4,
+      "speaking": 3.5
+    }
+  ],
+  "clients": [
+    {
+      "name": "Gravura",
+      "url": "https://gravura.es",
+      "logo": "logos/gravura.png"
+    },
+    {
+      "name": "Venu Sanz",
+      "url": "https://clubmenusaludable.com",
+      "logo": "logos/venusanz.png"
+    },
+    {
+      "name": "PlanB Comunicación",
+      "url": "https://planbcomunicacion.es",
+      "logo": "logos/planb.webp"
+    },
+    {
+      "name": "La Casa Amarilla",
+      "url": "http://lacasa-amarilla.es",
+      "logo": "logos/lcamalaga.png"
+    },
+    {
+      "name": "Beta5 Soluciones",
+      "url": "https://beta5.com",
+      "logo": "logos/beta5.png"
+    },
+    {
+      "name": "Centro de seguimiento formativo",
+      "url": "https://edukaformacion.com/formacion-bonificada/",
+      "logo": "logos/centroseguimientoformativo.svg"
+    },
+    {
+      "name": "Edutedis",
+      "url": "https://edutedis.com",
+      "logo": "logos/edutedis.png"
+    },
+    {
+      "name": "Grupo Eduka",
+      "url": "https://edukaformacion.com",
+      "logo": "logos/grupoeduka.png"
+    },
+    {
+      "name": "Mediterranea Masters",
+      "url": "https://mediterraneamasterschool.com",
+      "logo": "logos/mediterraneabs.webp"
+    },
+    {
+      "name": "Ideanto",
+      "url": "https://ideanto.com",
+      "logo": "logos/ideanto.png"
+    },
+    {
+      "name": "Reinventar Vintage",
+      "url": "https://reinventarvintage.com",
+      "logo": "logos/reinventarvintage.webp"
+    },
+    {
+      "name": "Aulatina",
+      "url": "https://aulatina.com",
+      "logo": "logos/aulatina.svg"
+    }
+  ]
+}
