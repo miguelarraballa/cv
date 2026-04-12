@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Technologies from "@/components/Technologies";
 import SkillsPortfolio from "@/components/SkillsPortfolio";
 import Education from "@/components/Education";
 import Certifications from "@/components/Certifications";
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="min-h-screen bg-white text-black">
       <ScrollSectionIndicator />
       <Hero />
+      <Technologies />
       <SkillsPortfolio />
       <Education />
       <Certifications />

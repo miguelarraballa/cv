@@ -12,6 +12,24 @@
     "linkedin": "https://www.linkedin.com/in/miguelarrabal/",
     "web": "https://mdmgdesarrolloweb.com"
   },
+  "technologies": [
+    {
+      "titulo": "Backend",
+      "tags": ["PHP", "Laravel", "Python", "WordPress", "REST API", "MySQL", "MariaDB"]
+    },
+    {
+      "titulo": "Frontend",
+      "tags": ["JavaScript", "React", "Next.js", "HTML5", "CSS", "Bootstrap", "jQuery", "Django"]
+    },
+    {
+      "titulo": "Tools",
+      "tags": ["AI", "Git", "Linux", "WooCommerce", "Stripe", "APIs", "Elementor", "Strapi"]
+    },
+    {
+      "titulo": "Extra",
+      "tags": ["automatización", "scraping", "análisis de datos", "SQL"]
+    }
+  ],
   "skills": {
     "tabs": [
       "Web",

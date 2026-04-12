@@ -41,7 +41,7 @@ function ClientCard({ name, url, logo }: { name: string; url: string; logo?: str
 
 export default function Clients() {
   return (
-    <Section title="Clientes Finales & Agencias" icon={<Users />}>
+    <Section title="Algunos Clientes Finales & Agencias" icon={<Users />}>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 items-center">
         {clients.map((client) => (
           <ClientCard key={client.name} {...client} />
