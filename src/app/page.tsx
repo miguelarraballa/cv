@@ -10,6 +10,7 @@ import Availability from "@/components/Availability";
 import Footer from "@/components/Footer";
 import SideNav from "@/components/SideNav";
 import DotNav from "@/components/DotNav";
+import MobileNav from "@/components/MobileNav";
 import BackToTop from "@/components/BackToTop";
 
 const jsonLd = {
@@ -57,6 +58,7 @@ export default function Home() {
       <main id="main-content" className="min-h-screen bg-white text-black">
         <SideNav />
         <DotNav />
+        <MobileNav />
         <BackToTop />
         <Hero />
         <Technologies />

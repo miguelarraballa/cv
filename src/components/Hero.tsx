@@ -104,7 +104,7 @@ export default function Hero() {
   ].filter(Boolean) as { icon: React.ReactNode; label: string; value: string; href?: string }[];
 
   return (
-    <section ref={sectionRef} className="min-h-screen flex items-center justify-center relative px-6">
+    <section ref={sectionRef} className="min-h-screen flex items-center justify-center relative px-6 pt-20 md:pt-0">
       <div className="max-w-4xl w-full">
         <div className="anim-hero-block">
 

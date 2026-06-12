@@ -2,7 +2,7 @@ import { Zap } from 'lucide-react';
 import Section from '@/components/ui/Section';
 
 const tags = [
-  { label: 'Freelance',               desc: 'Proyectos puntuales o continuados' },
+  { label: 'Freelance',                desc: 'Proyectos puntuales o continuados' },
   { label: 'Consultoría técnica',      desc: 'Revisión, diseño y toma de decisiones' },
   { label: 'Trabajo remoto',           desc: 'Full remote o híbrido' },
   { label: 'Proyectos a medida',       desc: 'Desarrollo desde cero a medida' },
@@ -11,6 +11,8 @@ const tags = [
   { label: 'Auditoría de código',      desc: 'Revisión de calidad, seguridad y rendimiento' },
   { label: 'Pair programming',         desc: 'Colaboración directa con equipos de desarrollo' },
   { label: 'Formación técnica',        desc: 'Mentoring y formación para equipos' },
+  { label: 'Cliente final',            desc: 'Desarrollos para empresas y particulares' },
+  { label: 'Agencias',                 desc: 'Desarrollos para agencias de marketing o diseño' },
 ];
 
 export default function Availability() {
