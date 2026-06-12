@@ -36,11 +36,11 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Este enlace se comparte sin autorización del autor",
     description:
       "Miguel Arrabal no autoriza la difusión de su contenido en X. Haz clic para conocer los motivos.",
-    images: ["/og-image.jpg"],
+    images: ["/twitter-image.jpg"],
   },
 };
 
