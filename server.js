@@ -60,6 +60,7 @@ const SECURITY_HEADERS = {
     "font-src 'self' data:",
     "frame-src 'self'",
     "connect-src 'self' https://www.linkedin.com https://github.com",
+    "worker-src 'self' blob:",
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",
