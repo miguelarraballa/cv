@@ -25,7 +25,7 @@ function EducationItem({
       <div className="flex flex-wrap items-start gap-2 mb-1">
         <h3 className="text-lg md:text-xl font-bold">{degree}</h3>
         {note && (
-          <span className="text-xs px-2 py-0.5 bg-black/5 border border-black/10 self-start mt-1">
+          <span className="text-xs px-2 py-0.5 bg-black/5 border border-black/10 self-start mt-1 rounded-[3px]">
             {note}
           </span>
         )}

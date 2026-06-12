@@ -1,5 +1,3 @@
-'use client';
-
 import { Cpu } from 'lucide-react';
 import Section from '@/components/ui/Section';
 import cvData from '@/data/cv.json';
@@ -22,7 +20,7 @@ export default function Technologies() {
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-sm px-3 py-1 border border-black/10 bg-black/[0.03] hover:border-black/30 hover:bg-black/[0.06] transition-all"
+                  className="text-sm px-3 py-1 border border-black/10 bg-black/[0.03] hover:border-black/30 hover:bg-black/[0.06] transition-all rounded-[3px]"
                 >
                   {tag}
                 </span>

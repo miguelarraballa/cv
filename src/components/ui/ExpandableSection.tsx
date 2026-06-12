@@ -1,7 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 interface ExpandableSectionProps {
@@ -21,17 +20,30 @@ export default function ExpandableSection({
   preview,
   children,
 }: ExpandableSectionProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const ref = useRef<HTMLElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '-100px' }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <motion.section
+    <section
       ref={ref}
       data-section={title}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-      transition={{ duration: 0.8 }}
-      className="py-16 md:py-24 px-6 border-t border-black/10"
+      className={`py-16 md:py-24 px-6 border-t border-black/10 ${visible ? 'section-visible' : 'section-hidden'}`}
     >
       <div className="max-w-6xl mx-auto">
         <button
@@ -45,38 +57,36 @@ export default function ExpandableSection({
             </div>
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-left">{title}</h2>
           </div>
-          <motion.div
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
-            className="flex-shrink-0 ml-4"
+          <div
+            className={`flex-shrink-0 ml-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : 'rotate-0'}`}
           >
             <ChevronDown size={32} />
-          </motion.div>
+          </div>
         </button>
 
         {!isExpanded && preview && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            className="mb-4"
-          >
+          <div className="mb-6 transition-opacity duration-300">
             {preview}
-          </motion.div>
+            <button
+              onClick={onToggle}
+              className="mt-8 text-sm underline underline-offset-4 opacity-50 hover:opacity-100 transition-opacity cursor-pointer"
+            >
+              Más detalle
+            </button>
+          </div>
         )}
 
-        <motion.div
-          initial={false}
-          animate={{
-            height: isExpanded ? 'auto' : 0,
-            opacity: isExpanded ? 1 : 0,
-          }}
-          transition={{ duration: 0.4, ease: 'easeInOut' }}
-          className="overflow-hidden"
+        {/* Grid rows trick: animates height: 0 → auto smoothly */}
+        <div
+          className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
+            isExpanded ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+          }`}
         >
-          <div className="pt-4">{children}</div>
-        </motion.div>
+          <div className="overflow-hidden">
+            <div className="pt-4">{children}</div>
+          </div>
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

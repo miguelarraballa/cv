@@ -37,7 +37,7 @@ function ExperienceItem({
         <div className="flex flex-wrap items-baseline gap-2">
           <h3 className="text-lg md:text-xl font-bold">{position}</h3>
           {type && (
-            <span className="text-xs px-2 py-0.5 bg-black/5 border border-black/10">
+            <span className="text-xs px-2 py-0.5 bg-black/5 border border-black/10 rounded-[3px]">
               {typeLabels[type] ?? type}
             </span>
           )}

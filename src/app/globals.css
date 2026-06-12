@@ -19,6 +19,70 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ── Keyframes ─────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fadeInAt70 {
+  from { opacity: 0; }
+  to   { opacity: 0.7; }
+}
+@keyframes fadeInAt60 {
+  from { opacity: 0; }
+  to   { opacity: 0.6; }
+}
+@keyframes heroChevronBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(10px); }
+}
+@keyframes sectionFadeInX {
+  from { opacity: 0; transform: translateX(10px); }
+  to   { opacity: 0.3; transform: translateX(0); }
+}
+
+/* ── Hero entry ────────────────────────────────────────── */
+.anim-hero-block    { animation: fadeInUp   0.8s ease 0.2s both; }
+.anim-hero-title    { animation: fadeInLeft 0.6s ease 0.4s both; }
+.anim-hero-subtitle { animation: fadeInAt70 0.8s ease 0.5s both; }
+.anim-hero-desc     { animation: fadeInAt60 0.8s ease 0.6s both; }
+.anim-hero-contacts { animation: fadeInUp   0.8s ease 0.8s both; }
+.anim-hero-button   { animation: fadeInUp   0.6s ease 1.0s both; }
+.anim-hero-chevron  { animation: fadeIn     1.0s ease 1.2s both; }
+.anim-hero-bounce   { animation: heroChevronBounce 2s ease-in-out infinite; }
+
+/* ── Section scroll-reveal ─────────────────────────────── */
+.section-hidden  { opacity: 0; transform: translateY(40px); }
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* ── Tab panel & stagger cards ─────────────────────────── */
+.anim-tab-panel { animation: fadeInUp 0.4s ease both; }
+.anim-card-in   { animation: fadeInUp 0.5s ease both; }
+
+/* ── Scroll section indicator ──────────────────────────── */
+.anim-section-label { animation: sectionFadeInX 0.3s ease both; }
+
+/* ── Reduced motion ────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

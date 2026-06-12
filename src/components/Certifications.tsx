@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Award, ExternalLink } from 'lucide-react';
 import ExpandableSection from '@/components/ui/ExpandableSection';
 import cvData from '@/data/cv.json';
@@ -59,52 +58,50 @@ function CertificationCard({
         </div>
       </div>
 
-      <motion.div
-        initial={false}
-        animate={{
-          height: showDiploma && diplomaFile ? 'auto' : 0,
-          opacity: showDiploma && diplomaFile ? 1 : 0,
-        }}
-        transition={{ duration: 0.3 }}
-        className="overflow-hidden"
+      {/* Grid rows trick for height: 0 → auto */}
+      <div
+        className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
+          showDiploma && diplomaFile ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+        }`}
       >
-        {diplomaFile && (
-          <div className="p-4 pt-0">
-            <div className="border border-black/10 bg-black/5">
-              {diplomaFile.endsWith('.pdf') ? (
-                <div className="relative">
-                  <iframe
+        <div className="overflow-hidden">
+          {diplomaFile && (
+            <div className="p-4 pt-0">
+              <div className="border border-black/10 bg-black/5">
+                {diplomaFile.endsWith('.pdf') ? (
+                  <div className="relative">
+                    <iframe
+                      src={diplomaFile}
+                      title={`Diploma: ${name}`}
+                      className="w-full h-64 md:h-96"
+                      loading="lazy"
+                    />
+                    <a
+                      href={diplomaFile}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="absolute top-2 right-2 text-xs px-2 py-1 bg-white border border-black/20 hover:bg-black hover:text-white transition-all inline-flex items-center gap-1"
+                    >
+                      Abrir PDF <ExternalLink size={11} />
+                    </a>
+                  </div>
+                ) : (
+                  <img
                     src={diplomaFile}
-                    title={`Diploma: ${name}`}
-                    className="w-full h-64 md:h-96"
+                    alt={`Diploma de ${name}`}
+                    className="w-full h-auto"
                     loading="lazy"
                   />
-                  <a
-                    href={diplomaFile}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute top-2 right-2 text-xs px-2 py-1 bg-white border border-black/20 hover:bg-black hover:text-white transition-all inline-flex items-center gap-1"
-                  >
-                    Abrir PDF <ExternalLink size={11} />
-                  </a>
-                </div>
-              ) : (
-                <img
-                  src={diplomaFile}
-                  alt={`Diploma de ${name}`}
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              )}
+                )}
+              </div>
             </div>
-          </div>
-        )}
-      </motion.div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
 
-// Group certifications by category for preview
 const previewItems = certifications.slice(0, 6).map((c) => `${c.name} (${c.year})`);
 
 export default function Certifications() {

@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ScrollSectionIndicator() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -27,24 +26,19 @@ export default function ScrollSectionIndicator() {
   }, []);
 
   return (
-    <AnimatePresence mode="wait">
-      {activeSection && (
-        <motion.div
-          key={activeSection}
-          initial={{ opacity: 0, x: 10 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 10 }}
-          transition={{ duration: 0.3 }}
-          className="fixed right-6 top-1/2 -translate-y-1/2 z-50 pointer-events-none hidden md:flex"
-        >
-          <span
-            className="text-[10px] font-medium tracking-widest uppercase opacity-30 whitespace-nowrap"
-            style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
-          >
-            {activeSection}
-          </span>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    <div
+      className={`fixed right-6 top-1/2 -translate-y-1/2 z-50 pointer-events-none hidden md:flex transition-opacity duration-300 ${
+        activeSection ? 'opacity-100' : 'opacity-0'
+      }`}
+    >
+      {/* key change remounts the span, re-triggering the CSS fade-in animation */}
+      <span
+        key={activeSection}
+        className="anim-section-label text-[10px] font-medium tracking-widest uppercase whitespace-nowrap"
+        style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
+      >
+        {activeSection}
+      </span>
+    </div>
   );
 }

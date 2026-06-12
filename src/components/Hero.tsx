@@ -1,7 +1,6 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
 import { GitBranch, Link2, Mail, Phone, MapPin, ChevronDown, Globe, ExternalLink, FileDown } from 'lucide-react';
 import cvData from '@/data/cv.json';
 
@@ -44,18 +43,27 @@ function ContactItem({
 }
 
 export default function Hero() {
-  const heroRef = useRef(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const [generating, setGenerating] = useState(false);
+  const [pdfError, setPdfError] = useState(false);
+
+  function scrollPastHero() {
+    const height = sectionRef.current?.offsetHeight ?? window.innerHeight;
+    window.scrollTo({ top: height, behavior: 'smooth' });
+  }
 
   async function handleDownloadPdf() {
     setGenerating(true);
-    const { generateCvPdf } = await import('@/lib/generateCvPdf');
-    await generateCvPdf();
-    setGenerating(false);
+    setPdfError(false);
+    try {
+      const { generateCvPdf } = await import('@/lib/generateCvPdf');
+      await generateCvPdf();
+    } catch {
+      setPdfError(true);
+    } finally {
+      setGenerating(false);
+    }
   }
-  const { scrollYProgress } = useScroll();
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95]);
 
   const contactItems = [
     personal.email && {
@@ -96,23 +104,11 @@ export default function Hero() {
   ].filter(Boolean) as { icon: React.ReactNode; label: string; value: string; href?: string }[];
 
   return (
-    <motion.section
-      ref={heroRef}
-      style={{ opacity, scale }}
-      className="min-h-screen flex items-center justify-center relative px-6"
-    >
+    <section ref={sectionRef} className="min-h-screen flex items-center justify-center relative px-6">
       <div className="max-w-4xl w-full">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          <motion.div
-            className="mb-6 flex items-center gap-4"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
+        <div className="anim-hero-block">
+
+          <div className="mb-6 flex items-center gap-4 anim-hero-title">
             <div className="w-1 h-16 bg-black flex-shrink-0" />
             <div>
               <p className="text-sm tracking-[0.3em] uppercase opacity-60 mb-1">
@@ -122,43 +118,23 @@ export default function Hero() {
                 {personal.nameDisplay}
               </h1>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.p
-            className="text-lg md:text-xl opacity-70 max-w-2xl mb-4 leading-relaxed"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.7 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
+          <p className="anim-hero-subtitle text-lg md:text-xl max-w-2xl mb-4 leading-relaxed">
             {personal.subtitle}
-          </motion.p>
+          </p>
 
-          <motion.p
-            className="text-base md:text-lg opacity-60 max-w-2xl mb-12 leading-relaxed"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.6 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
+          <p className="anim-hero-desc text-base md:text-lg max-w-2xl mb-12 leading-relaxed">
             {personal.description}
-          </motion.p>
+          </p>
 
-          <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
+          <div className="anim-hero-contacts grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">
             {contactItems.map((item) => (
               <ContactItem key={item.label} {...item} />
             ))}
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1 }}
-            className="mb-12"
-          >
+          <div className="anim-hero-button mb-12">
             <button
               onClick={handleDownloadPdf}
               disabled={generating}
@@ -167,23 +143,26 @@ export default function Hero() {
               <FileDown size={16} />
               {generating ? 'Generando PDF…' : 'Descargar CV en PDF'}
             </button>
-          </motion.div>
-        </motion.div>
+            {pdfError && (
+              <p className="mt-2 text-xs opacity-50">
+                No se pudo generar el PDF. Inténtalo de nuevo.
+              </p>
+            )}
+          </div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="flex justify-center"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+        <div className="anim-hero-chevron flex justify-center">
+          <button
+            onClick={scrollPastHero}
+            aria-label="Ir al contenido"
+            className="cursor-pointer"
           >
-            <ChevronDown size={32} className="opacity-30" />
-          </motion.div>
-        </motion.div>
+            <div className="anim-hero-bounce">
+              <ChevronDown size={32} className="opacity-30 hover:opacity-70 transition-opacity" />
+            </div>
+          </button>
+        </div>
       </div>
-    </motion.section>
+    </section>
   );
 }

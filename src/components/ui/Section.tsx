@@ -1,7 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
 interface SectionProps {
   title: string;
@@ -11,17 +10,37 @@ interface SectionProps {
 }
 
 export default function Section({ title, icon, children, className = '' }: SectionProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const ref = useRef<HTMLElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '-100px' }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  const id = title
+    .toLowerCase()
+    .normalize('NFD').replace(/\p{Diacritic}/gu, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
 
   return (
-    <motion.section
+    <section
       ref={ref}
+      id={id}
       data-section={title}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-      transition={{ duration: 0.8 }}
-      className={`py-16 md:py-24 px-6 ${className}`}
+      className={`py-16 md:py-24 px-6 ${visible ? 'section-visible' : 'section-hidden'} ${className}`}
     >
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center gap-4 mb-10 md:mb-12">
@@ -32,6 +51,6 @@ export default function Section({ title, icon, children, className = '' }: Secti
         </div>
         {children}
       </div>
-    </motion.section>
+    </section>
   );
 }
